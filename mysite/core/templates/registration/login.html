@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<div>
+        <div class="card border-success mb-3" >
+            <div class="card-header bg-transparent border-success">
+                <ul class="nav nav-pills card-header-pills">
+			<div>
+				<a class="navbar-brand">
+					<img src={% static "/images/home/ruteo.jpeg" %}  width="40" height="34">
+				</a>
+			</div>
+			<li class="nav-item">
+                        	<a class="nav-link">Inicio</a>
+                	</li>
+        	        <li class="nav-item">
+                	        <a class="nav-link">Farmacias</a>
+                        </li>
+	                <li class="nav-item">
+        	                <a class="nav-link">Distancias</a>
+                        </li>
+                        <li class="nav-item">
+                    	    <a class="nav-link">Rutas</a>
+	                </li>
+                        <li class="nav-item">
+            	            <a class="nav-link active" aria-current="page">Ingresar</a>
+                        </li>
+			 <li class="nav-item">
+				{% if request.user.is_authenticated %}
+					<button type="button" class="btn btn-success">Usuario: {{ user.username }}</button>
+				{% else %}
+					<button type="button" class="btn btn-outline-success">Usuario: Anónimo</button>
+				{% endif %}                        
+			</li>
+                  </ul>
+            </div>
+            <div class="card-body text-success">
+              <h5 class="card-title">INGRESAR</h5>
+		<form action="" method="post">
+			{% csrf_token %}
+			<input type="text" name=username id="" placeholder="Nombre de usuario">
+			<br>
+			<input type="password" name=password id="" placeholder="contraseña">
+			<br>
+			<button type="submit"> Iniciar sesión </button>
+		</form>
+            </div>
+            <!-- <div class="card-footer bg-transparent border-success">Footer</div> -->
+        </div>
+</div>
+{% endblock %}
+
