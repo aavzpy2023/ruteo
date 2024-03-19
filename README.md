@@ -4,8 +4,11 @@ Proyecto para la confección de una aplicación web con Estudiantes de Ingenier�
 PREPARACIÓN DEL ENTORNO DE DESARROLLO
 
 1 - Cargar el ambiente de Python en consola
+
   1 - Si es Anaconda (Anaconda Promt)
+  
   2 - Si es python debe crear el ambiente de python (python -m venv mientorno) y activarlo (Ejecutar por consola el archivo activate.bat del directorio Scripts/activate.bat
+  
 2 - Navegar hasta la carpeta del proyecto utilizando el comando "cd"
 3 - Clonar el repositorio (git clone https://github.com/aavzpy2023/ruteo.git)
 4 - Navegar hasta la carpeta mysite/mysite
