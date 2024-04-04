@@ -5,7 +5,7 @@ class Farmacias(models.Model):
     """Tabla farmacias"""
     nombre = models.CharField(max_length=50)
     municipio = models.CharField(max_length=50)
-    
+    provincia = models.CharField(max_length=50)
 
 class Distancias(models.Model):
     """Tabla Distancias
