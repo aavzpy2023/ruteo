@@ -4,10 +4,12 @@ from . import views
 
 
 urlpatterns = [
+    # path("", views.login, name="login"),
     path("", views.home, name="home"),
     # path("account/login/", views.entrar, name="entrar"),
-    path("rutas/", views.rutas, name="rutas"),
-    path("distancias/", views.distancias, name="distancias"),
-    path("farmacias/", views.farmacias, name="farmacias"),
-    path("logout/", views.salir, name="salir"),
+    # path("routes/", views.routes, name="rutas"),
+    # path("street_sections/", views.street_sections, name="distancias"),
+    path("nodos/", views.node, name="nodos"),
+    # path("logout/", views.logout, name="salir"),
+    # path("newlogin/", views.new_login, name="newlogin"),
 ]

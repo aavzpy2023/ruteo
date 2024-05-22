@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+        <div class="topnav">
+            <div class="navbtn">
+                <a class="hori_btns" href="">
+                    <img src={% static "./images/crud/new/new.jpg" %} alt="Nuevo" title="Crear {{ subtitle }}">
+                </a>
+                <a class="hori_btns" href="">
+                    <img src={% static "./images/crud/new/see.jpg" %} alt="Ver"  title="Ver {{ subtitle }}">
+                </a>
+                <a class="hori_btns" href="">
+                    <img src={% static "./images/crud/new/edit.jpg" %} alt="Editar" title="Editar {{ subtitle }}">
+                </a>
+                <a class="hori_btns" href="">
+                    <img src={% static "./images/crud/new/delete.jpg" %} alt="Borrar"  title="Borrar {{ subtitle }}">
+                </a>
+            </div>
+            <div class="logged">
+                <!-- <div> -->
+                    <div class="user"><strong>{{user.username}}</strong>&rarr;</div>
+                    <div class="logout">
+                        (<a href={% url "logout" %}>Salir</a>)
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+ 
+
+ {% endblock content %}

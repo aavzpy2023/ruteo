@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="topnav">
+    <div class="navbtn">
+        <div>
+            <strong>{{ title }}</strong>
+        </div>
+    </div>
+    <div class="logged">
+        <!-- <div> -->
+            <div class="user"><strong>{{user.username}}</strong>&rarr;</div>
+            <div class="logout">
+                (<a href={% url "logout" %}>Salir</a>)
+            </div>
+        <!-- </div> -->
+    </div>
+    
+</div>
+<div>
+    <p style="padding: 0 15px;">
+    La optimización de rutas es un proceso crucial para las empresas que gestionan flotas de vehículos de reparto. La misma,
+    consiste en determinar la ruta más eficiente que un vehículo debe seguir, considerando un número  específico de paradas
+    y todas las variables externas que pueden afectar el viaje. En tal sentido, la aplicacicón <strong>RuDist</strong> puede
+    contribuir a reducir de manera realista los costos operativos de la flota y a aumentar la satisfacción del cliente al cumplir
+    de manera confiable los objetivos de tiempo de llegada.
+    </p>
+
+            
+
+</div>
+ {% endblock content %}

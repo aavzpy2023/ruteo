@@ -1,53 +1,51 @@
-{% extends 'base.html' %}
-
-{% block content %}
-{% load static %}
-<div>
-        <div class="card border-success mb-3" >
-            <div class="card-header bg-transparent border-success">
-                <ul class="nav nav-pills card-header-pills">
-			<div>
-				<a class="navbar-brand">
-					<img src={% static "/images/home/ruteo.jpeg" %}  width="40" height="34">
-				</a>
-			</div>
-			<li class="nav-item">
-                        	<a class="nav-link">Inicio</a>
-                	</li>
-        	        <li class="nav-item">
-                	        <a class="nav-link">Farmacias</a>
-                        </li>
-	                <li class="nav-item">
-        	                <a class="nav-link">Distancias</a>
-                        </li>
-                        <li class="nav-item">
-                    	    <a class="nav-link">Rutas</a>
-	                </li>
-                        <li class="nav-item">
-            	            <a class="nav-link active" aria-current="page">Ingresar</a>
-                        </li>
-			 <li class="nav-item">
-				{% if request.user.is_authenticated %}
-					<button type="button" class="btn btn-success">Usuario: {{ user.username }}</button>
-				{% else %}
-					<button type="button" class="btn btn-outline-success">Usuario: Anónimo</button>
-				{% endif %}                        
-			</li>
-                  </ul>
+<!DOCTYPE html data-theme="dark">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    {% load static %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ruteo de vehículos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href={% static "css/style.css" %}>
+    </head>
+    <body class="maintext">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+      <div class="loginform borderbox" >
+        <h2>RuDist<sub>v0.9</sub></h2>
+        <form method="post" autocomplete="on">
+			      {% csrf_token %}
+            <div >
+                <!-- <h3 style="text-align: center; margin: auto; margin-top: .4em">Autenticar </h3> -->
+                <div>
+                    <table style="padding: .8em" width="100%">
+                        <tr>
+                            <td><input type="text" name="username" class="textinput" placeholder="Nombre de usuario" value="" autofocus> </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="password" name="password" class="textinput" placeholder="Contraseña" style="margin-top:.5em" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center; ">
+                                <input type="submit" name="btnloginAccept" class="loginbtn textinput" value="Entrar" style="margin-right: 1vw;">
+                                <input type="reset" name="btnloginReset" class="loginbtn textinput" value="Limpiar">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div class="card-body text-success">
-              <h5 class="card-title">INGRESAR</h5>
-		<form action="" method="post">
-			{% csrf_token %}
-			<input type="text" name=username id="" placeholder="Nombre de usuario">
-			<br>
-			<input type="password" name=password id="" placeholder="contraseña">
-			<br>
-			<button type="submit"> Iniciar sesión </button>
-		</form>
-            </div>
-            <!-- <div class="card-footer bg-transparent border-success">Footer</div> -->
-        </div>
-</div>
-{% endblock %}
+        </form>
+      </div>
 
+
+        <script src="" async defer></script>
+    </body>
+</html>
