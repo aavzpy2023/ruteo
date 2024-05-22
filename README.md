@@ -30,4 +30,5 @@ LEVANTAR EL SERVIDOR CON DJANGO
 2 - Ejecutar el siguiente comando: python manage.py runserver 9000
 
 3 - Abrir un navegador y entrar en la url: http://localhost:9000
+
 4 - Agregar un push
